@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>'Cranchy's Personal Space'</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    background: url("https://media.giphy.com/media/b29IZK1dP4aWs/giphy.gif") no-repeat center top;
+    background-size: cover; 
+    }
+
+    .container {
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.6);
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 3px solid white;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* Default link style (keep your existing one if you want) */
+    .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        text-decoration: none;
+        color: white;
+        padding: 12px;
+        border-radius: 10px;
+        transition: 0.2s;
+    }
+
+    /* Brand colors */
+    .twitter { background: #000000; }
+    .tiktok  { background: #000000; }
+    .youtube { background: #cc0000; }
+    .twitch  { background: #9146FF; }
+    .itch    { background: #FA5C5C; }
+    .github  { background: #000000; }
+    .discord { background: #5865F2; }
+
+    /* Hover effect */
+    .link:hover {
+        opacity: 0.85;
+        transform: scale(1.03);
+    }
+
+    .link i {
+        font-size: 18px;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 20px;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+
+<script>
+    document.addEventListener("click", function () {
+        const audio = document.getElementById("bg-audio");
+        audio.volume = 0.1;
+        audio.play();
+    }, { once: true });
+</script>
+
+
+<div class="container">
+
+    <img src="imgs/furinacute.jpg" alt="Profile Picture" class="profile-img">
+
+    <h1>Cranchy</h1>
+
+    <p><i>I like to do a lot of things but not all the things that I make are great.</i></p>
+
+    <br>
+
+    <div class="links">
+
+    <a href="https://www.youtube.com/@CranchyCranchy" class="link youtube" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+        YouTube
+    </a>
+
+    <a href="https://www.twitch.tv/cranchycranchy" class="link twitch" target="_blank">
+        <i class="fa-brands fa-twitch"></i>
+        Twitch
+    </a>
+
+    <a href="https://cranchy23.itch.io/" class="link itch" target="_blank">
+        <i class="fa-brands fa-itch-io"></i>
+        Itch.io
+    </a>
+
+    <a href="https://discord.com/invite/rdB4gkgVHV" class="link discord" target="_blank">
+        <i class="fa-brands fa-discord"></i>
+        Discord Server
+    </a>
+
+    <a href="https://github.com/CranchyDev" class="link github" target="_blank">
+        <i class="fa-brands fa-github"></i>
+        GitHub
+    </a>
+
+    <a href="https://x.com/CranchyCranchy" class="link twitter" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i>
+        Twitter (X)
+    </a>
+
+    <a href="https://www.tiktok.com/@cranchyy" class="link tiktok" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+        TikTok
+    </a>
+
+    </div>
+
+</div>
+
+<audio id="bg-audio" loop autoplay loop>
+    <source src="audio/audiobackground.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
